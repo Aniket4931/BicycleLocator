@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicycle Locator</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        /* Change background color of the header */
+
+        /* Change text color of the header links */
+        header a {
+            color: white;
+        }
+
+        /* Change background color of the hero section */
+        .hero-section {
+            background-color: #f0f0f0;
+            /* Light gray */
+        }
+
+        /* Change text color of the hero section */
+        .hero-section h2 {
+            color: #fffdfd;
+            /* Dark gray */
+        }
+
+        /* Change background color of the cycle rent process section */
+        .rent-process-section {
+            background-color: #1a202c;
+            /* Blue */
+        }
+
+        /* Change text color of the cycle rent process section */
+        .rent-process-section h2,
+        .rent-process-section h3 {
+            color: white;
+        }
+
+        /* Change background color of the cards in the cycle rent process section */
+        .rent-process-section .card {
+            background-color: #222d41;
+            border-radius: 0.5rem;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        /* Change text color of the cards in the cycle rent process section */
+        .rent-process-section .card h3,
+        .rent-process-section .card p {
+            color: #ffffff;
+            /* Dark gray */
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply fade-in animation to cards */
+        .rent-process-section .card:nth-child(1) {
+            animation: fadeIn 0.5s ease forwards 0.5s;
+        }
+
+        .rent-process-section .card:nth-child(2) {
+            animation: fadeIn 0.5s ease forwards 1s;
+        }
+
+        .rent-process-section .card:nth-child(3) {
+            animation: fadeIn 0.5s ease forwards 1.5s;
+        }
+
+        /* Set body background to black */
+        body {
+            background-color: #1a202c;
+            /* This is the actual color value for bg-gray-900 */
+        }
+
+        /* Add CSS animation for fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply fade-in animation to contact section */
+        .contact-section {
+            animation: fadeIn 3s ease-out forwards;
+        }
+
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Apply animation to the footer */
+        footer {
+            animation: fadeInFooter 4s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="py-4" style="background-color: #1a202c;">
+
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Bicycle Locator</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="/" class="text-white">Home</a></li>
+                    <li><a href="/login" class="text-white">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-96 hero-section" style="background-image: url('/static/images/cycle.jpg');">
+        <div class="container mx-auto flex justify-center items-center h-full">
+            <div class="relative z-10 text-center">
+                <h2 class="text-white text-4xl font-bold">Find Your Perfect Ride</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cycle Rent Process Section -->
+    <section class="py-16 bg-gray-900 rent-process-section">
+        <div class="container mx-auto flex justify-center">
+            <!-- Step 1 -->
+            <a href="/BicycleApp">
+                <div class="max-w-md rounded-lg overflow-hidden shadow-lg card mr-6 bg-gray-800">
+                    <div class="p-6 text-white"> <!-- Added text-white class here -->
+                        <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center">
+                            <span class="text-2xl font-semibold">1</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Browse Available Bicycles</h3>
+                        <p class="text-gray-700">Explore our selection of bicycles and choose the one that suits your
+                            needs.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <!-- Step 2 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg card mr-6">
+                <div class="p-6 text-white"> <!-- Added text-white class here -->
+                    <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center">
+                        <span class="text-2xl font-semibold">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Select Bicycle for Rental</h3>
+                    <p class="text-gray-700">Pick the bicycle you want to rent and specify the rental duration.</p>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg card mr-6">
+                <div class="p-6 text-white"> <!-- Added text-white class here -->
+                    <div class="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center">
+                        <span class="text-2xl font-semibold">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-4 mb-2">Select Bicycle for Rental</h3>
+                    <p class="text-gray-700">Pick the bicycle you want to rent and specify the rental duration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Us Section -->
+    <section class="py-16 bg-gray-800 text-white contact-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold mb-8">Contact Us</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="text-gray-400 mb-4">Have a question or need assistance? Reach out to us!</p>
+                    <ul class="text-gray-400">
+                        <li class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M10 2a8 8 0 00-8 8c0 5.523 4.477 10 10 10s10-4.477 10-10A8 8 0 0010 2zm1.768 14.232a6 6 0 11-3.536-3.536L10 8.465l2.768 2.768zM5 11a1 1 0 100-2 1 1 0 000 2zm10-3a1 1 0 100-2 1 1 0 000 2zm-5 5a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            123 Street Name, City, Country
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 2a8 8 0 00-8 8c0 5.523 4.477 10 10 10s10-4.477 10-10A8 8 0 0010 2zm1.768 14.232a6 6 0 11-3.536-3.536L10 8.465l2.768 2.768zM5 11a1 1 0 100-2 1 1 0 000 2zm10-3a1 1 0 100-2 1 1 0 000 2zm-5 5a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            +1234567890
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-semibold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name"
+                                class="w-full border border-gray-400 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 text-black">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-semibold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email"
+                                class="w-full border border-gray-400 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 text-black">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Enter your message"
+                                class="w-full border border-gray-400 rounded-lg py-2 px-4 focus:outline-none focus:border-blue-500 text-black"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">Send
+                            Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto flex justify-center items-center">
+            <p>&copy; 2024 Bicycle Locator. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
